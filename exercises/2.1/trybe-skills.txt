@@ -2,3 +2,5 @@
 - Bash
 - Git
 - Phyton3
+- HTML
+- CSS
