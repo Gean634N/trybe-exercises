@@ -58,7 +58,7 @@ O comando :nth-child() considera:
 */
 
 .colors:nth-child(1) {
-  padding: 3em 0em 3em 0.5em;
+  padding: 3em 0 3em 0.5em;
 }
 .colors:nth-child(odd) {
   font-style: italic;
