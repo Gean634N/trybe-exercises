@@ -3,6 +3,7 @@
 
 
 let numeros = []; // variavel q receberá os 3 numeros.
+let par = false;
 for (let i = 0; i < 3; i += 1) { // este for atribui tres numeros aleatórios a variavel numeros[].
   let numero = Math.floor(Math.random() * 10);
   numeros.push(numero);
@@ -11,5 +12,7 @@ for (let i = 0; i < 3; i += 1) { // este for atribui tres numeros aleatórios a 
 
 
 if ((numeros[0] % 2 === 0) || (numeros[1] % 2 === 0) ||(numeros[2] % 2 === 0)) {
-  console.log(true);
+  par = true;
 }
+console.log('\nHá pelo menos um numero par?');
+console.log(par);
