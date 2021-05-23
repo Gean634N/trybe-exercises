@@ -1,7 +1,7 @@
 // Exercicio 4 - Faça uma pirâmide com n asteriscos de base
 
-let n = 111;
-let m = n/2; // variavel q determina a altura da piramide.
+let n = 11;
+let m = (n/2); // variavel q determina a altura da piramide.
 
 // A piramide será formada por duas metades, então o loop externo faz apenas (n/2) iterações, representado pela variavel 'm'.
 for (let i = m; i > 0; i -= 1) { // iterações regressivas facilita a primeira metade.

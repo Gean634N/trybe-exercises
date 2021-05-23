@@ -7,33 +7,29 @@ n = 7
  *   *
 *******
 */
-let base = 51;
+let base = 11;
 let meiaBase = (base/2).toFixed() ;
 for (let i = meiaBase; i > 0; i -= 1) {
   let linhaAsteriscos = '';
   if (i > 1) {
     for (let j = 1; j <= meiaBase; j += 1) {
-      if (j < i) {
-        linhaAsteriscos += ' ';
-      } else if (j > i) {
+      if (j < i || j > i) {
         linhaAsteriscos += ' ';
       } else {
         linhaAsteriscos += '*';
       }
     }
     for (let j = 1; j <= meiaBase; j += 1) {
-      if (j < (meiaBase - i)) {
-        linhaAsteriscos += ' ';
-      } else if (j > (meiaBase - i)) {
+      if (j < (meiaBase - i) || j > (meiaBase - i)) {
         linhaAsteriscos += ' ';
       } else {
         linhaAsteriscos += '*';
       }
     }
-} else {
-  for (let j = 0; j < base; j += 1) {
-    linhaAsteriscos += '*'
+  } else {
+    for (let j = 0; j < base; j += 1) {
+      linhaAsteriscos += '*'
+    }
   }
-}
   console.log(linhaAsteriscos);
 }
