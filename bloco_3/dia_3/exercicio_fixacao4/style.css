@@ -1,0 +1,71 @@
+/*
+1 - Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado primo, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).
+*/
+ol li {
+  background-color: #ffff00;
+}
+
+ol li:nth-child(odd) {
+  background-color: #008000;
+}
+
+/*
+O exercicio dos numeros premimos foi respondido utilisando a ideia de deixar de selecionar os numeros compostos(não primos), em um intervalo, utilizando o algoritmo de Eratóstenes, ele vai testando se um número é primo e, se for, elimina todos os seus múltiplos, isso nos da um intervolo de confiança até X²+1, sento X o ultimo numero primo verificado, se testarmos até o numero 7, nosso intervalo nesse exercicio será 0..10, com X = 3 e X² + 1 = 10, a formula utilizada no teste será Xn + 2X, utilizando os comandos not() e :nth-child() para implementar a logica.
+
+Referencia:
+https://github.com/xieranmaya/blog/issues/12
+https://educacao.uol.com.br/disciplinas/matematica/numeros-primos-veja-algoritmo-para-encontra-los.htm;
+*/
+ol li:not(:first-child, :nth-child(2n + 4), :nth-child(3n + 6), :nth-child(5n + 10), :nth-child(7n + 14)){
+  text-transform: uppercase ;
+}
+
+/*
+2 - Faça todas as tags Header (h1, h2...) possuírem cor de fonte vermelha e, se alguma delas estiver em itálico, aumente seu tamanho para 40px e acrescente uma borda de 1px preta e sólida.
+*/
+h1, h2 {
+  color: #ff0000;
+}
+h1 em, h2 em {
+  font-size: 40px;
+  border: #000 1px solid;
+}
+
+/*
+3 - Faça todas as li's terem 20px de tamanho de fonte e, para todo texto em itálico dentro de alguma li, utilize a propriedade font-weight para deixá-lo negrito.*/
+li {
+  font-size: 20px;
+}
+li em {
+  font-weight: bold;
+}
+
+/*
+4 - Na listagem de linguagens de programação, faça com que as 3 primeiras da listas possuam cor de fonte azul e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa.
+*/
+.program-lenguages:nth-child(1), .program-lenguages:nth-child(2), .program-lenguages:nth-child(3) {
+  color: #ff0000;
+}
+/*
+5 - (Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"
+  Dica 1: Utilize o seletor :hover para controlar o passar do mouse.
+  Dica 2: Sugestão de cores padrão. StackOverflow (laranja), W3Schools (verde), MDN (preta), DevDocs (amarela), Trybe (verde).*/
+
+.allies a:hover {
+	text-decoration: none;
+}
+.s-overflow:hover, .allies li:first-child:hover {
+  color: #ffa500;
+}
+.w3s:hover, .allies li:nth-child(2):hover {
+  color: #008000;
+}
+.mdn:hover, .allies li:nth-child(3):hover {
+  color: #000;
+}
+.devdocs:hover, .allies li:nth-child(4):hover {
+  color: #ffff00;
+}
+.trybe:hover, .allies li:nth-child(5):hover {
+  color: #008000;
+}

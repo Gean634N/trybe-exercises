@@ -1,0 +1,65 @@
+h3 {
+  margin: 0;
+
+}
+div {
+  width: ; 
+  padding: 0.5em;
+}
+
+.all-colors:hover {
+  border: none;
+}
+
+div:hover {
+  border: solid;
+}
+
+.primary-color {
+  background-color:blue;
+}
+.secundary-color {
+  background-color: green;
+}
+.complementary-color {
+  background-color: orange;
+}
+.dark-color {
+  background-color: darkblue;
+}
+.light-color {
+  background-color: lightblue;
+}
+
+/*material de referencia usado nos dois ultimos itens: https://www.w3schools.com/cssref/sel_nth-child.asp 
+
+OBS:
+O comando :nth-child tem as seguintes caracteristicas:
+ -> Seleciona todo n elemento dentro de uma tag pai.
+ -> Conta todos os elementos dentro de uma tag pai independente da tag destes
+Portanto se dentro do body há um conjunto de tags conforme o aninhamento q segue: 
+<body>
+  <h1><\h1>
+  <p><\p>
+  <div>
+    <h3><\h3>
+  <\div>
+  <div>
+    <h3><\h3>
+  <\div>
+  <div>
+    <h3><\h3>
+  <\div>
+<\body>
+
+O comando :nth-child() considera:
+ -> todos os h3 impares, pois todos são o primeiro dentro da div que se encontram
+ -> as divs são respectivamente os 3º, 4º e 5º elemento dentro do body
+*/
+
+.colors:nth-child(1) {
+  padding: 3em 0 3em 0.5em;
+}
+.colors:nth-child(odd) {
+  font-style: italic;
+}
