@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+}
+
+#container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+#header-container {
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border: 1px solid green;
+}
+
+.emergency-tasks {
+  display: inline-block;
+  height: 400px;
+  margin: 56px 0;
+  width: 400px;
+}
+
+.emergency-tasks div {
+  height: 198px;
+  border: 1px solid rgb(4, 46, 32);
+}
+.emergency-tasks h3 {
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.no-emergency-tasks {
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+}
+
+.no-emergency-tasks div {
+  height: 198px;
+  border: 1px solid green;
+}
+
+.no-emergency-tasks h3 {
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#footer-container {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid green;
+}
