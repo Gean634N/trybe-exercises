@@ -18,17 +18,40 @@ divUm.addEventListener('click', alteraCLasse);
 divDois.addEventListener('click', alteraCLasse);
 divTres.addEventListener('click', alteraCLasse);
 
-/*
- Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-com a classe 'tech';
- Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-redirecione para alguma página;
-1. Que tal redirecionar para seu portifólio?
- Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-a cor do mesmo;
 
-Segue abaixo um exemplo do uso de event.target:
-*/
+//  Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
+// com a classe 'tech';
+// function mudaTexto(texto) {
+//   const techAtual = document.querySelector('.tech');
+//   techAtual.innerText = texto.target.value;
+// }
+
+// input.addEventListener('keyup', mudaTexto);
+
+// refatorando
+input.addEventListener('input', (texto) => {
+  const techAtual = document.querySelector('.tech');
+  techAtual.innerText = texto.target.value;
+});
+
+//  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
+// redirecione para alguma página;
+// 1. Que tal redirecionar para seu portifólio?
+myWebpage.addEventListener('dblclick', () => {
+  window.location.replace('https://gean634n.github.io/');
+});
+//  Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
+// a cor do mesmo;
+myWebpage.addEventListener('mouseenter', (alvo) => {
+  alvo.target.style.color = 'darkgreen'
+});
+
+myWebpage.addEventListener('mouseout', (alvo) => {
+  alvo.target.style.color = 'white';
+});
+
+// Segue abaixo um exemplo do uso de event.target:
+
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
