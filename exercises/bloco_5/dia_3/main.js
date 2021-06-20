@@ -4,21 +4,19 @@ const divTres = document.getElementById('divTres');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('mySpotrybefy');
 
-/*
- Copie esse arquivo e edite apenas ele;
- Crie uma função que adicione a classe 'tech' ao elemento selecionado;
-1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-*/
-function handleChangeTech(event) {
-  const techElement = document.querySelector('.tech');
-  techElement.classList.remove('tech');
-  event.target.classList.add('tech');
-  input.value = '';
+
+//  Copie esse arquivo e edite apenas ele;
+//  Crie uma função que adicione a classe 'tech' ao elemento selecionado;
+// 1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+function alteraCLasse(alvo) {
+  const techAtual = document.querySelector('.tech');
+  techAtual.classList.remove('tech');
+  alvo.target.classList.add('tech')
 }
 
-divUm.addEventListener('click', handleChangeTech);
-divDois.addEventListener('click', handleChangeTech);
-divTres.addEventListener('click', handleChangeTech);
+divUm.addEventListener('click', alteraCLasse);
+divDois.addEventListener('click', alteraCLasse);
+divTres.addEventListener('click', alteraCLasse);
 
 /*
  Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
